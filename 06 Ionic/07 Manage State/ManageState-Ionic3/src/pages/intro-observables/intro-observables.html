@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Intro Observables</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <button ion-button color="secondary" (click)="useObsCreate()">useObsCreate</button>
+  <button ion-button color="secondary" (click)="useObsFrom()">useObsFrom</button>
+  <button ion-button color="secondary" (click)="useFromPromise()">useFromPromise</button>
+  <button ion-button color="secondary" (click)="createArrayObservable()">Create Obs Array</button>
+  <button ion-button color="secondary" (click)="usingBS()">Behavier Subject</button>
+
+  <h5>Result:</h5>
+  <br> {{nbrObs | async}}
+
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>gestures</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card (tap)="tapEvent($event)">
+    <ion-item> Tapped: {{ tap }} times </ion-item>
+  </ion-card>
+
+  <ion-card (press)="pressEvent($event)">
+    <ion-item> Pressed: {{ press }} times </ion-item>
+  </ion-card>
+
+  <ion-card (pan)="panEvent($event)">
+    <ion-item> Panned: {{ pan }} times </ion-item>
+  </ion-card>
+
+  <ion-card (swipe)="swipeEvent($event)">
+    <ion-item> Swiped: {{ swipe }} times </ion-item>
+  </ion-card>
+</ion-content>

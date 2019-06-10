@@ -1,0 +1,14 @@
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\bin\Debug\netcoreapp2.2\coreSSL.deps.json
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\bin\Debug\netcoreapp2.2\coreSSL.runtimeconfig.json
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\bin\Debug\netcoreapp2.2\coreSSL.runtimeconfig.dev.json
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\bin\Debug\netcoreapp2.2\coreSSL.dll
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\bin\Debug\netcoreapp2.2\coreSSL.pdb
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\obj\Debug\netcoreapp2.2\coreSSL.csprojAssemblyReference.cache
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\obj\Debug\netcoreapp2.2\coreSSL.csproj.CoreCompileInputs.cache
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\obj\Debug\netcoreapp2.2\coreSSL.RazorAssemblyInfo.cache
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\obj\Debug\netcoreapp2.2\coreSSL.RazorAssemblyInfo.cs
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\obj\Debug\netcoreapp2.2\coreSSL.AssemblyInfoInputs.cache
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\obj\Debug\netcoreapp2.2\coreSSL.AssemblyInfo.cs
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\obj\Debug\netcoreapp2.2\coreSSL.RazorTargetAssemblyInfo.cache
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\obj\Debug\netcoreapp2.2\coreSSL.dll
+G:\Classes\PWA-Ionic\01 Introduction\coreSSL\obj\Debug\netcoreapp2.2\coreSSL.pdb

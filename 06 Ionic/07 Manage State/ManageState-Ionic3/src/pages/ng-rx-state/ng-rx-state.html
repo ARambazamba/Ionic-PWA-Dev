@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>NgRx Intro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label float>Enter amount in €</ion-label>
+    <ion-input type="number" [ngModel]='amount$ | async' (ngModelChange)="onAmountChange($event)"></ion-input>
+  </ion-item>
+
+  <ion-list>
+
+    <ion-list-header>
+      Corresponds to:
+    </ion-list-header>
+    <ion-item *ngFor="let currency of (currencyRates$ | async)">
+      <ion-label>
+        {{currency.code}}
+      </ion-label>
+      <ion-label>
+        {{currency.value * (amount$ | async )| number:'1.2-2'}}
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

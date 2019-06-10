@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Select a Demo:
+    </ion-list-header>
+
+    <ion-item button *ngFor="let di of items" (click)="doNav(di.Url)">
+      {{ di.Title }}
+    </ion-item>
+  </ion-list>
+</ion-content>

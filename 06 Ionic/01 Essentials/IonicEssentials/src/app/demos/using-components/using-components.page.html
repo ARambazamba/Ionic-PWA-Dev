@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+  <ion-toolbar>
+    <ion-title>Using Components</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-hound-edit [hound]="selectedHound"></app-hound-edit>
+  <app-hound-list
+    [houndSource]="hounds"
+    (houndSelected)="clickedHound($event)"
+  ></app-hound-list>
+</ion-content>

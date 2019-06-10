@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-card *ngFor="let m of markers" (click)="showMarker(m)">
+      <ion-card-header>
+        {{ m.lable }}
+      </ion-card-header>
+      <ion-card-content>
+        <img [src]="m.imgURL" />
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

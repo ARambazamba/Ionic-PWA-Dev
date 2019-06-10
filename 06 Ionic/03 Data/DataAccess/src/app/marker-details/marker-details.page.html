@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>markerDetails</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>ID</ion-label>
+    <ion-input type="number" [(ngModel)]="marker.id" readonly></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Label</ion-label>
+    <ion-input type="text" [(ngModel)]="marker.lable"></ion-input>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-content>
+      <img [src]="marker.imgURL" />
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item button (click)="saveMarker()">
+      Save
+    </ion-item>
+    <ion-item button (click)="deleteMarker()">
+      Delete
+    </ion-item>
+    <ion-item button (click)="addMarker()">
+      Add Marker
+    </ion-item>
+  </ion-list>
+</ion-content>

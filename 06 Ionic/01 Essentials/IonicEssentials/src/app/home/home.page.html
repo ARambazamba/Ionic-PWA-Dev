@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Essentials
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Select a Demo:
+    </ion-list-header>
+
+    <ion-item button [href]="'/using-toolbar/'" routerDirection="forward">
+      Using Toolbar
+    </ion-item>
+
+    <ion-item button [href]="'/navigation-target/'" routerDirection="forward">
+      Navigation using href
+    </ion-item>
+
+    <ion-item button [href]="'/navigation-target/10'" routerDirection="forward">
+      Navigation using href with param
+    </ion-item>
+
+    <ion-item button (click)="doNav('using-components')">
+      Using Components & NavCtrl
+    </ion-item>
+
+    <ion-item button (click)="useNavigateParam()">
+      Use NavCtrl.Push()
+    </ion-item>
+
+    <ion-item button (click)="useNavigateParam('thetitle')">
+      Use NavCtrl.Push() with param
+    </ion-item>
+
+    <ion-item tappable *ngFor="let di of items" (click)="doNav(di.Url)">
+      {{ di.Title }}
+    </ion-item>
+  </ion-list>
+</ion-content>

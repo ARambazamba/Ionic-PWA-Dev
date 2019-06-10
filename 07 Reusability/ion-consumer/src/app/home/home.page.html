@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Reusing Code
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let d of dogs">
+      {{ d.name }}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "appId": "at.integrations.camera",
+  "appName": "cap-camer",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

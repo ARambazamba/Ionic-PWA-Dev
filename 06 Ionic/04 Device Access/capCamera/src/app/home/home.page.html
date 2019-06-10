@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Capacitor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Select a Demo:
+    </ion-list-header>
+
+    <ion-item button [href]="'/cap-browser/'" routerDirection="forward">
+      Using Browser
+    </ion-item>
+
+    <ion-item button [href]="'/cap-camera/'" routerDirection="forward">
+      Camera
+    </ion-item>
+  </ion-list>
+</ion-content>

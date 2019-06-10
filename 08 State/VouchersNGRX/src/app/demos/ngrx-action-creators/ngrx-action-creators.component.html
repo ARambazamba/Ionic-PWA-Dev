@@ -1,0 +1,27 @@
+<mat-card>
+  Typed Checked State
+</mat-card>
+
+<mat-card>
+  <mat-checkbox
+    [(ngModel)]="showFilterPane"
+    (change)="checkChanged(this.showFilterPane)"
+    >Check me!</mat-checkbox
+  >
+  <div>
+    Check the checkbox - move away to another page - return and investigate the
+    State of the Checkbox.<br />
+
+    Compare:
+  </div>
+</mat-card>
+<mat-card>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Enter your favorite food"
+      [(ngModel)]="food"
+    /> </mat-form-field
+  ><br />
+  <a mat-raised-button (click)="updateFavFoood()">Update</a>
+</mat-card>

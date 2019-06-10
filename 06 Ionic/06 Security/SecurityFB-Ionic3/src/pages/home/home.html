@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="secondary" text-center>
+    <div class="header">Sighthound Lovers</div>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="!loggedIn" text-center>
+    <button ion-button clear (click)="goToLoginPage()">Sign In</button>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="loggedIn">
+    <button ion-button clear small>
+      <ion-icon name="contact">
+        {{email}}
+      </ion-icon>
+    </button>
+    <button ion-button clear small (click)="signOff()">Sign Out</button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list *ngFor="let menu of menuData">
+    <ion-card [navPush]=menu.pushPage>
+      <ion-card-title>{{menu.title}}</ion-card-title>
+      <ion-card-content>
+        <img src={{menu.pic}} class="logo">
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

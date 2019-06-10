@@ -1,0 +1,10 @@
+<ion-card *ngIf="houndSource == null">{{ noHounds }} </ion-card>
+
+<ion-card *ngIf="houndSource != null">
+  <ion-list>
+    <ion-item *ngFor="let h of houndSource" (click)="selectHound(h.id)">
+      Race: {{ h.race }}<br />
+      Origin: {{ h.origin }}
+    </ion-item>
+  </ion-list></ion-card
+>

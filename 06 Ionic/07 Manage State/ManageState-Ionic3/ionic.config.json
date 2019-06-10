@@ -1,0 +1,7 @@
+{
+  "name": "ManageState",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

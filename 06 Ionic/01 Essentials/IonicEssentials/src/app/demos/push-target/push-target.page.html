@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>push-target</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label>Title: {{ title }}</ion-label>
+
+  <ion-button expand="full" (click)="goBack()">Go Back using Method</ion-button>
+
+  <ion-button expand="full" fill="outline" (click)="goToRoot()"
+    >Go To Root</ion-button
+  >
+
+  <ion-button expand="full" shape="round" [routerLink]="['/']"
+    >Go To Root using RL</ion-button
+  >
+</ion-content>

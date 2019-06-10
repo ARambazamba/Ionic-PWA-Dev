@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Manage State
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-list-header>
+      Select a Demo:
+    </ion-list-header>
+
+    <a ion-item *ngFor="let di of items " (click)="doNav(di.Url)">
+      {{di.Title}}
+    </a>
+  </ion-list>
+
+</ion-content>

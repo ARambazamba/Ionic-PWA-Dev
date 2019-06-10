@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>custom-events</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  Open Developer Tools (F12) - See Console msg
+
+  <ion-button expand="full" (click)="triggerCustomEvent()"
+    >Trigger Event</ion-button
+  >
+</ion-content>

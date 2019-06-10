@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>camera</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button expand="full" (click)="takePicture()">
+    <ion-icon name="camera"></ion-icon>Take Photo
+  </ion-button>
+
+  <ion-button expand="full" (click)="savePhoto()">
+    <ion-icon name="cloud"></ion-icon>Save Photo
+  </ion-button>
+
+  <ion-button expand="full" (click)="savePhoto()">
+    <ion-icon name="deletePhoto"></ion-icon>Delete Photo
+  </ion-button>
+
+  <ion-card>
+    <img [src]="base64Image" *ngIf="base64Image" />
+  </ion-card>
+</ion-content>

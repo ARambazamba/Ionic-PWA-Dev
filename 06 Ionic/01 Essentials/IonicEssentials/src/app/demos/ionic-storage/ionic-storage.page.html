@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ionic storage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>Make sure you are running an emulator</ion-card>
+
+  <ion-list>
+    <ion-list-header>
+      Select an Action for Storage:
+    </ion-list-header>
+    <ion-item>
+      <ion-button expand="full" (click)="writeHoundsToStorage()">
+        Write Hounds to Storage
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-button expand="full" (click)="writeLottoNumbers()">
+        Write Lotto Nbrs
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-button expand="full" (click)="deleteOne()">Delete One</ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-button expand="full" (click)="deleteAll()">Delete All</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-card
+    ><ion-label>Hounds: {{ hounds | json }}</ion-label
+    ><br />
+    <ion-label>Lotto: {{ lotto | json }}</ion-label></ion-card
+  >
+</ion-content>

@@ -1,0 +1,37 @@
+[
+  {
+    "url": "inline",
+    "title": "Inline Component",
+    "component": "InlineComponent"
+  },
+  {
+    "url": "template",
+    "title": "Template Component",
+    "component": "TemplateComponent"
+  },
+  {
+    "url": "expressions",
+    "title": "Expressions & Interpolation",
+    "component": "ExpressionsComponent"
+  },
+  {
+    "url": "binding",
+    "title": "Data Binding",
+    "component": "BindingComponent"
+  },
+  {
+    "url": "projection",
+    "title": "Content Projection",
+    "component": "ContentProjectionComponent"
+  },
+  {
+    "url": "directives",
+    "title": "Using Directives",
+    "component": "DirectivesComponent"
+  },
+  {
+    "url": "structdirectives",
+    "title": "Structural Directives",
+    "component": "StructDirectivesComponent"
+  }
+]

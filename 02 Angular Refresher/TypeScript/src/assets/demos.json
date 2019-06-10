@@ -1,0 +1,7 @@
+[
+  {
+    "url": "intro",
+    "title": "Typescript Intro",
+    "component": "TsintroComponent"
+  }
+]

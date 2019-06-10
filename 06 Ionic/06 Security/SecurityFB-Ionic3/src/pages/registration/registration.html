@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register an Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating color="primary">Display Name</ion-label>
+    <ion-input type="email" [(ngModel)]="reg.displayName" name="displayName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating color="primary">Email Address</ion-label>
+    <ion-input type="email" [(ngModel)]="reg.email" name="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating color="primary">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="reg.pwd" name="pwd"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating color="primary">Re-type Password</ion-label>
+    <ion-input type="password" [(ngModel)]="reg.pwd2" name="pwd2"></ion-input>
+  </ion-item>
+  <ion-row style="height: 20px"></ion-row>
+  <button ion-button color="secondary" full (click)="registerAcct()">Register</button>
+
+</ion-content>

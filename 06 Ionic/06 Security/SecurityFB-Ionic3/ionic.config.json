@@ -1,0 +1,7 @@
+{
+  "name": "SecurityFB",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

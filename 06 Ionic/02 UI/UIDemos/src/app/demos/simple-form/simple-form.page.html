@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>simple-form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label for="name">Name</ion-label>
+    <ion-input
+      type="text"
+      class="form-control"
+      name="personName"
+      placeholder="Enter name"
+      [(ngModel)]="person.name"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label for="age">Age</ion-label>
+    <ion-input
+      type="number"
+      class="form-control"
+      name="personAge"
+      placeholder="Enter age"
+      [(ngModel)]="person.age"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>DoB</ion-label>
+    <ion-datetime
+      display-format="MM/YYYY"
+      picker-format="MM/YYYY"
+      [(ngModel)]="person.dob"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-list radio-group [(ngModel)]="person.gender">
+    <ion-list-header>
+      Gender
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Male</ion-label>
+      <ion-radio value="male"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Female</ion-label>
+      <ion-radio value="female"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Married</ion-label>
+    <ion-toggle [(ngModel)]="person.married"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Wealth</ion-label><br />
+    <ion-select [(ngModel)]="person.wealth">
+      <ion-select-option *ngFor="let pw of wealth" value="{{ pw }}">{{
+        pw
+      }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="savePerson($event)">
+      Save
+    </ion-button>
+  </ion-item>
+</ion-content>

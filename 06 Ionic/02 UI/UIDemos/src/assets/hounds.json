@@ -1,0 +1,23 @@
+[
+  {
+    "id": 3,
+    "race": "Galgo Espanol",
+    "origin": "Spain",
+    "imgUrl": "/assets/images/galgo.png",
+    "likes": 20
+  },
+  {
+    "id": 2,
+    "race": "Whippet",
+    "origin": "Great Britain",
+    "imgUrl": "/assets/images/whippet.jpg",
+    "likes": 15
+  },
+  {
+    "id": 1,
+    "race": "Saluki",
+    "origin": "Persia",
+    "imgUrl": "/assets/images/saluki.jpg",
+    "likes": 12
+  }
+]

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>sliding-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/images/avatar-gollum.jpg" />
+      </ion-avatar>
+      <h2>Venkman</h2>
+      <p>Back off man, I'm a scientist.</p>
+    </ion-item>
+    <ion-item-options>
+      <ion-button color="light" icon-start>
+        <ion-icon name="ios-more"></ion-icon>
+        More
+      </ion-button>
+      <ion-button color="primary" icon-start (click)="texting()">
+        <ion-icon name="text"></ion-icon>
+        Text
+      </ion-button>
+      <ion-button color="secondary" icon-start>
+        <ion-icon name="call"></ion-icon>
+        Call
+      </ion-button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-content>
