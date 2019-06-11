@@ -34,9 +34,33 @@ cordova run ios | android
 
 ### Cordova Wrap Angular
 
-Add Cordova to existing Angular App
+Add Cordova to a new folder
 
-cordova create smart-sammler-pwa at.yourdomain.sammler SmartSammler
+```
+cordova create smart-sammler-cordova at.yourdomain.sammler SmartSammler
+```
+
+Merge the two projects & and copy Cordova-section to `package.json`
+
+```
+ "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+    },
+    "platforms": [
+      "browser",
+      "android",
+      "ios"
+    ]
+  }
+}
+```
+
+Test on device
+
+```
+cordova run ios | android
+```
 
 ## HTML APIs
 
