@@ -100,7 +100,9 @@ Test on device
 cordova run ios | android
 ```
 
-> Note: Make sure you have to `ANDROID_HOME` env. var. set to `C:\Users\%USER%\AppData\Local\Android\Sdk`
+> Note: Make sure you have to `ANDROID_HOME` env. var. set to `C:\Users\%USER%\AppData\Local\Android\Sdk` and downloaded Android Build SDK
+
+![sdk](_images/sdk.png)
 
 # HTML APIs
 
