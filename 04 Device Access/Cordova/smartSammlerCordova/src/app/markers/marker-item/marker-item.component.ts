@@ -1,67 +1,58 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
+// import { GeolocationService } from "angular-cordova/plugin/geolocation";
 import { ActivatedRoute } from "@angular/router";
-import * as Rx from "rx-dom";
-import { Subscription } from "rxjs";
-import { ConnectionService } from "../../shared/connection/connection.service";
-import { BLANK_MARKER } from "../../shared/consts";
-import { Direction, Marker, markerType } from "../../shared/model";
-import { ScreenService } from "../../shared/screen/screen.service";
 import { MarkerService } from "../marker.service";
+import { Marker, markerType, Direction } from "../../shared/model";
+import { BLANK_MARKER } from "../../shared/consts";
+import { Subscription } from "rxjs";
+import { MediaObserver, MediaChange } from "@angular/flex-layout";
+import { GeoServiceHTMLService } from "src/app/shared/geo-service-html.service";
+
+declare var navigator;
+declare var Camera;
 
 @Component({
   selector: "app-marker-item",
   templateUrl: "./marker-item.component.html",
-  styleUrls: ["./marker-item.component.scss"]
+  styleUrls: ["./marker-item.component.scss"],
+  // providers: [GeolocationService]
+  providers: [GeoServiceHTMLService]
 })
 export class MarkerItemComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private ms: MarkerService,
-    private cs: ConnectionService,
-    private screen: ScreenService
+    // private geolocationService: GeolocationService,
+    private geolocationService: GeoServiceHTMLService,
+    private media: MediaObserver
   ) {}
 
   marker: Marker = null;
   imgHeight: number;
 
-  online: boolean;
-  mq: string;
-
   editMode: boolean = false;
-  showDirection: boolean = false;
+  showDirections: boolean = false;
   showWeather: boolean = false;
 
-  direction: Direction = {
+  getGeoSubs: Subscription = null;
+  mediaSubs: Subscription = null;
+
+  directions: Direction = {
     origin: { lat: 0, lng: 0 },
     destination: { lat: 0, lng: 0 }
   };
 
-  geoSubs: Subscription = null;
-  screenSubs: Subscription = null;
-  conSubs: Subscription = null;
-
   ngOnInit() {
     this.getMarker();
-    this.subscribeScreen();
-    this.subscriptConnetionState();
+    this.media.media$.subscribe((change: MediaChange) => {
+      this.imgHeight = change.mqAlias == "xs" ? 100 : 250;
+    });
+    this.getCurrentPosition();
   }
 
   ngOnDestroy(): void {
-    if (this.geoSubs != null) this.geoSubs.unsubscribe();
-    if (this.screenSubs != null) this.screenSubs.unsubscribe();
-    if (this.conSubs != null) this.conSubs.unsubscribe();
-  }
-
-  private subscribeScreen() {
-    this.conSubs = this.screenSubs = this.screen.MQ.subscribe((mq: string) => {
-      this.imgHeight = mq == "xs" ? 100 : 250;
-    });
-  }
-
-  private subscriptConnetionState() {
-    this.cs.isOnline.subscribe(online => {
-      this.online = online;
-    });
+    if (this.getGeoSubs != null) this.getGeoSubs.unsubscribe();
+    if (this.mediaSubs != null) this.mediaSubs.unsubscribe();
   }
 
   getMarkerType(type: number): string {
@@ -70,7 +61,7 @@ export class MarkerItemComponent implements OnInit, OnDestroy {
 
   //Edit Mode
 
-  toggleEdit(showSnack: boolean = false) {
+  toggleEdit() {
     this.editMode = !this.editMode;
   }
 
@@ -86,8 +77,7 @@ export class MarkerItemComponent implements OnInit, OnDestroy {
           this.marker = this.getNewMarker();
           this.editMode = true;
         }
-        this.checkCoords(this.marker);
-        this.setMarkerAsDestination();
+        this.setMarkerAsDestination(this.marker.lat, this.marker.lng);
       });
     });
   }
@@ -96,9 +86,16 @@ export class MarkerItemComponent implements OnInit, OnDestroy {
     let marker: Marker = new Marker();
     marker.imgURL = BLANK_MARKER;
     marker.type = 0;
-    this.getCurrentLocation().then(p => {
-      this.copyCoordsToMarker(marker, p.coords.latitude, p.coords.longitude);
-    });
+
+    this.getGeoSubs = this.geolocationService
+      .getCurrentPosition()
+      .subscribe(res => {
+        this.copyCoordsToMarker(
+          this.marker,
+          res.coords.latitude,
+          res.coords.longitude
+        );
+      });
     return marker;
   }
 
@@ -109,16 +106,11 @@ export class MarkerItemComponent implements OnInit, OnDestroy {
 
   //Marker GPS
 
-  checkCoords(m: Marker) {
-    if (this.marker.lat != undefined && this.marker.lng != undefined) {
+  setMarkerAsDestination(lat: number, lng: number) {
+    if (lat != 0 && lng != 0) {
+      this.directions.destination.lat = lat;
+      this.directions.destination.lng = lng;
       this.marker.hasCoords = true;
-    }
-  }
-
-  setMarkerAsDestination() {
-    if (this.marker != undefined) {
-      this.direction.destination.lat = this.marker.lat;
-      this.direction.destination.lng = this.marker.lng;
     }
   }
 
@@ -128,43 +120,61 @@ export class MarkerItemComponent implements OnInit, OnDestroy {
     marker.hasCoords = true;
   }
 
-  getCurrentLocation(): Promise<Position> {
-    return new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(
-        position => {
-          resolve(position);
-        },
-        () => {
-          reject("We could not get your location");
-        }
-      );
-    });
-  }
-
   setMarkerLocation() {
-    this.getCurrentLocation()
-      .then((p: Position) => {
+    this.getGeoSubs = this.geolocationService
+      .getCurrentPosition()
+      .subscribe(res => {
         this.copyCoordsToMarker(
           this.marker,
-          p.coords.latitude,
-          p.coords.longitude
+          res.coords.latitude,
+          res.coords.longitude
         );
-      })
-      .catch(err => console.log(err));
+      });
   }
 
-  watchDirection() {
-    var source = Rx.DOM.geolocation.watchPosition();
-    this.geoSubs = source.subscribe((data: any) => {
-      this.direction.origin.lat = data.coords.latitude;
-      this.direction.origin.lng = data.coords.longitude;
-      this.showDirection = true;
-    });
+  navigateTo() {
+    this.directions.destination.lat = this.marker.lat;
+    this.directions.destination.lng = this.marker.lng;
+    this.showDirections = true;
+  }
+
+  private getCurrentPosition() {
+    this.getGeoSubs = this.geolocationService
+      .getCurrentPosition()
+      .subscribe(res => {
+        this.directions.origin.lat = res.coords.latitude;
+        this.directions.origin.lng = res.coords.longitude;
+      });
   }
 
   //Camera
 
   takePicture() {
-    console.log("take pic");
+    var m = this.marker;
+
+    var camOptions = {
+      quality: 100,
+      destinationType: Camera.DestinationType.FILE_URI,
+      sourceType: Camera.PictureSourceType.CAMERA,
+      encodingType: 0,
+      mediaType: Camera.MediaType.PICTURE,
+      allowEdit: true,
+      correctOrientation: true
+    };
+
+    navigator.camera.getPicture(
+      function cameraSuccess(imageUri) {
+        // You may choose to copy the picture, save it somewhere, or upload.
+        m.imgURL = imageUri;
+      },
+      function cameraError(error) {
+        console.debug("Unable to obtain picture: " + error, "app");
+      },
+      camOptions
+    );
   }
+
+  //Sharing
+
+  shareMarker() {}
 }
