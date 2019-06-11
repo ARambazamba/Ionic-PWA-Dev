@@ -12,9 +12,8 @@ Enable Self Signed Cert Trust in Chrome: `chrome://flags/#allow-insecure-localho
 
 Create a certifcate for Angular: Go to `.\create-certs`. Execute:
 
-``
+```
 bash generate.sh
-
 ```
 
 > Bash is available on Windows Machines if you have installed [Git Bash](https://git-scm.com/downloads)
@@ -24,7 +23,6 @@ bash generate.sh
 You can adjust the `[dn]` part of the `openssl-custom.cnf` file to whatever you prefer.
 
 ```
-
 [dn]
 C = <COUNTRY>
 ST = <STATE>
@@ -33,8 +31,7 @@ O = <ORGANIZATION>
 OU = <ORGANIZATION_UNIT>
 emailAddress = <EMAIL_ADDRESS>
 CN = <HOSTNAME / IP_ADDRESS>
-
-````
+```
 
 ![create-ssl](_images/create-ssl.gif)
 
@@ -49,7 +46,7 @@ CN = <HOSTNAME / IP_ADDRESS>
         "sslKey": "/ssl/server.key",
         "sslCert": "/ssl/server.crt"
     },
-````
+```
 
 ## Configure .NET Core with SSL
 
