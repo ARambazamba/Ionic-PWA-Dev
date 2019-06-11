@@ -1,6 +1,6 @@
 {
-  "appId": "at.integrations.camera",
-  "appName": "cap-camer",
+  "appId": "at.integrations.capdemo",
+  "appName": "capacitor-app",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www"
