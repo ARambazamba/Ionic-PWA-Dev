@@ -2,6 +2,8 @@
 
 ## Native Device Access using Cordova
 
+### Cordova Native App
+
 [Cordova Home](https://cordova.apache.org/)
 
 Setup:
@@ -29,6 +31,8 @@ cordova run ios | android
 ```
 
 [Cordova Plugin Gallery](https://cordova.apache.org/plugins/)
+
+### Cordova Wrap Angular
 
 ## HTML APIs
 
