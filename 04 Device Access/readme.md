@@ -27,7 +27,7 @@ cordova platform add ios | android | browser | elektron
 Run a platform
 
 ```
-cordova run ios | android
+cordova run browser | ios | android
 ```
 
 ### Manage Plugins
@@ -131,3 +131,13 @@ Run Project
 ```
 tns preview
 ```
+
+# Links & Readings
+
+[Android Device Bridge - Gettings started](https://www.xda-developers.com/install-adb-windows-macos-linux/)
+
+[Chrome Remote Debugging](https://software.intel.com/en-us/xdk/docs/using-remote-chrome-devtools-to-debug-android-cordova-apps)
+
+[Apple Remote Debugging](https://software.intel.com/en-us/xdk/docs/using-web-inspector-remote-to-debug-ios-cordova-apps)
+
+[Cordova Browser Platform Details](https://www.raymondcamden.com/2016/03/22/the-cordova-browser-platform)
