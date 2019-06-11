@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { MediaChange, ObservableMedia } from "@angular/flex-layout";
+import { MediaChange, MediaObserver } from "@angular/flex-layout";
 import { Router } from "@angular/router";
 import { BehaviorSubject, Observable, Subscription } from "rxjs";
 import { map } from "rxjs/operators";
@@ -11,7 +11,7 @@ import { environment } from "../../environments/environment";
 export class MarkerService {
   constructor(
     private router: Router,
-    private obsMedia: ObservableMedia,
+    private mediaObs: MediaObserver,
     private httpClient: HttpClient
   ) {
     this.subscribeScreen();
@@ -92,7 +92,7 @@ export class MarkerService {
   private currentMQ: string;
 
   private subscribeScreen() {
-    this.watcher = this.obsMedia.subscribe((change: MediaChange) => {
+    this.watcher = this.mediaObs.media$.subscribe((change: MediaChange) => {
       this.currentMQ = change.mqAlias;
       switch (this.currentMQ) {
         case "xs":

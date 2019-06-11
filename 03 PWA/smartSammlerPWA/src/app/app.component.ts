@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { ObservableMedia, MediaChange } from "@angular/flex-layout";
-import { MarkerService } from "./markers/marker.service";
-import { MatSnackBar } from "@angular/material";
-import { ActivatedRoute, Router } from "@angular/router";
+import { MediaChange, MediaObserver } from "@angular/flex-layout";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-root",
@@ -13,21 +11,11 @@ export class AppComponent implements OnInit {
   title = "app";
   ltSM = false;
 
-  constructor(private ar: ActivatedRoute, private media: ObservableMedia) {}
+  constructor(private ar: ActivatedRoute, private mediaObs: MediaObserver) {}
 
   ngOnInit(): void {
-    this.media.subscribe((change: MediaChange) => {
+    this.mediaObs.media$.subscribe((change: MediaChange) => {
       this.ltSM = change.mqAlias == "sm" ? true : false;
-
-      // if (change.mqAlias == "sm") {
-      //   this.snackbar.open("responding to small", "Info", {
-      //     duration: 2000
-      //   });
-      // } else {
-      //   this.snackbar.open("responding to big", "Info", {
-      //     duration: 2000
-      //   });
-      // }
     });
   }
 }

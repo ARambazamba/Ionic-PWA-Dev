@@ -1,14 +1,14 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { ObservableMedia, MediaChange } from "@angular/flex-layout";
+import { MediaObserver, MediaChange } from "@angular/flex-layout";
 import { BehaviorSubject } from "rxjs";
 
 @Injectable({
   providedIn: "root"
 })
 export class ScreenService {
-  constructor(private media: ObservableMedia) {
-    this.media.subscribe((change: MediaChange) => {
+  constructor(private mediaObs: MediaObserver) {
+    this.mediaObs.media$.subscribe((change: MediaChange) => {
       this.mq.next(change.mediaQuery);
     });
   }

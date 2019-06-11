@@ -83,38 +83,4 @@ const appRoutes: Routes = [
   providers: [{ provide: LOCALE_ID, useValue: "de-DE" }, MarkerService],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(
-    private update: SwUpdate,
-    private push: SwPush,
-    private snackbar: MatSnackBar
-  ) {
-    // this.handleUpdate(update, snackbar);
-    // this.handlePush(push, snackbar);
-  }
-
-  private handlePush(push: SwPush, snackbar: MatSnackBar) {
-    const key = "";
-    push
-      .requestSubscription({ serverPublicKey: key })
-      .then(PushSubscription => {
-        console.log(PushSubscription.toJSON());
-      });
-    push.messages.subscribe(msg => {
-      snackbar.open(JSON.stringify(msg), "Push Notification", {
-        duration: 3000
-      });
-    });
-  }
-
-  private handleUpdate(update: SwUpdate, snackbar: MatSnackBar) {
-    update.available.subscribe(update => {
-      const snack = snackbar.open("Update available", "Info", {
-        duration: 3000
-      });
-      snack.onAction().subscribe(() => {
-        window.location.reload();
-      });
-    });
-  }
-}
+export class AppModule {}
