@@ -39,7 +39,7 @@ cordova plugin add cordova-device-plugin
 cordova plugin add cordova-plugin-camera
 ```
 
-## Build & Deploy App
+### Build & Deploy App
 
 - [Enalble Developer Featues on Device](https://developer.android.com/studio/debug/dev-options)
 
@@ -51,7 +51,7 @@ adb install -r platforms\android\app\build\outputs\apk\debug\app-debug.apk
 cordiva run android
 ```
 
-## Configure Debugging
+### Configure Debugging
 
 - Browser Based Debugging - open Chrome - Go to:
 
