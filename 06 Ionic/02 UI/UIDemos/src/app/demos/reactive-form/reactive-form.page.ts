@@ -8,6 +8,17 @@ import { Person } from "src/app/shared/model";
   styleUrls: ["./reactive-form.page.scss"]
 })
 export class ReactiveFormPage implements OnInit {
+  personForm: FormGroup;
+
+  person: Person = <Person>{
+    name: "Heinz",
+    gender: "male",
+    age: 12,
+    email: "derschoeneheinz@xyz.at",
+    wealth: "poor",
+    dob: new Date()
+  };
+
   constructor(private fb: FormBuilder) {
     this.personForm = this.fb.group({
       name: [this.person.name],
@@ -18,16 +29,6 @@ export class ReactiveFormPage implements OnInit {
       wealth: [this.person.wealth]
     });
   }
-
-  personForm: FormGroup;
-
-  person: Person = <Person>{
-    name: "Heinz",
-    gender: "male",
-    age: 12,
-    email: "derschoeneheinz@xyz.at",
-    wealth: "poor"
-  };
 
   wealth = ["poor", "rich", "middle class"];
 

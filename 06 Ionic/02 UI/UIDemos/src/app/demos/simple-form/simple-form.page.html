@@ -9,7 +9,6 @@
     <ion-label for="name">Name</ion-label>
     <ion-input
       type="text"
-      class="form-control"
       name="personName"
       placeholder="Enter name"
       [(ngModel)]="person.name"
@@ -19,7 +18,6 @@
     <ion-label for="age">Age</ion-label>
     <ion-input
       type="number"
-      class="form-control"
       name="personAge"
       placeholder="Enter age"
       [(ngModel)]="person.age"
@@ -29,24 +27,26 @@
   <ion-item>
     <ion-label>DoB</ion-label>
     <ion-datetime
-      display-format="MM/YYYY"
-      picker-format="MM/YYYY"
+      display-format="MMM DD, YYYY"
+      picker-format="MMM DD, YYYY"
       [(ngModel)]="person.dob"
     ></ion-datetime>
   </ion-item>
 
-  <ion-list radio-group [(ngModel)]="person.gender">
-    <ion-list-header>
-      Gender
-    </ion-list-header>
-    <ion-item>
-      <ion-label>Male</ion-label>
-      <ion-radio value="male"></ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>Female</ion-label>
-      <ion-radio value="female"></ion-radio>
-    </ion-item>
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>
+        Gender
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Male</ion-label>
+        <ion-radio value="male" [(ngModel)]="person.gender"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Female</ion-label>
+        <ion-radio value="female" [(ngModel)]="person.gender"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
   </ion-list>
 
   <ion-item>

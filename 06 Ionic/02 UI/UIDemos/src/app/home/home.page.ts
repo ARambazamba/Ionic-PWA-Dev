@@ -28,8 +28,6 @@ export class HomePage {
       { Title: "Form Validation", Url: "form-validation" },
       { Title: "Cards", Url: "cards" },
       { Title: "Simpel List", Url: "simple-list" },
-      { Title: "Refresher List", Url: "refresher-list" },
-      { Title: "Search List", Url: "search-list" },
       { Title: "Sliding List", Url: "sliding-list" },
       { Title: "Segment List", Url: "segment-list" },
       { Title: "Infinite Scroll", Url: "infinite-scroll" },

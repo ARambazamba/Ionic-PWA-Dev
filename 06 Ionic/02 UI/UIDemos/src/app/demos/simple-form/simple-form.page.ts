@@ -9,16 +9,18 @@ import { Person } from "src/app/shared/model";
 export class SimpleFormPage implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.person = <Person>{
+      name: "Heinz",
+      gender: "male",
+      age: 12,
+      email: "derschoeneheinz@xyz.at",
+      wealth: "poor",
+      dob: new Date()
+    };
+  }
 
-  person: Person = <Person>{
-    name: "Heinz",
-    gender: "male",
-    age: 12,
-    email: "derschoeneheinz@xyz.at",
-    wealth: "poor",
-    dob: new Date(2001, 11, 22)
-  };
+  person: Person;
 
   wealth = ["poor", "rich", "middle class"];
 

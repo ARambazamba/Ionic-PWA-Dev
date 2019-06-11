@@ -31,18 +31,20 @@
       ></ion-datetime>
     </ion-item>
 
-    <ion-list radio-group formControlName="gender">
-      <ion-list-header>
-        Gender
-      </ion-list-header>
-      <ion-item>
-        <ion-label>Male</ion-label>
-        <ion-radio value="male"></ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-label>Female</ion-label>
-        <ion-radio value="female"></ion-radio>
-      </ion-item>
+    <ion-list>
+      <ion-radio-group>
+        <ion-list-header>
+          Gender
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Male</ion-label>
+          <ion-radio value="male" formControlName="gender"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Female</ion-label>
+          <ion-radio value="female" formControlName="gender"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
     </ion-list>
 
     <ion-item>
