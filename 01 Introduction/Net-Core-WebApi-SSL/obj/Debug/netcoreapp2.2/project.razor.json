@@ -1,0 +1,18 @@
+{
+  "FilePath": "g:\\Classes\\PWA-Ionic\\01 Introduction\\Net-Core-WebApi-SSL\\coreSSL.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": "coreSSL",
+  "Documents": []
+}

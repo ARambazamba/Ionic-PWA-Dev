@@ -1,5 +1,4 @@
 $androidHome = "C:\Users\$env:username\AppData\Local\Android\Sdk"
-[Environment]::SetEnvironmentVariable("ANDROID_HOME", $androidHome, "User")
 [Environment]::SetEnvironmentVariable("ANDROID_SDK_HOME", $androidHome, "User")
 
 $binTools = "C:\Users\$env:username\AppData\Local\Android\Sdk\tools\bin"

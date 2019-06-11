@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Classes\\PWA-Ionic\\01 Introduction\\coreSSL\\coreSSL.csproj": {}
+    "g:\\Classes\\PWA-Ionic\\01 Introduction\\Net-Core-WebApi-SSL\\coreSSL.csproj": {}
   },
   "projects": {
-    "G:\\Classes\\PWA-Ionic\\01 Introduction\\coreSSL\\coreSSL.csproj": {
+    "g:\\Classes\\PWA-Ionic\\01 Introduction\\Net-Core-WebApi-SSL\\coreSSL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Classes\\PWA-Ionic\\01 Introduction\\coreSSL\\coreSSL.csproj",
+        "projectUniqueName": "g:\\Classes\\PWA-Ionic\\01 Introduction\\Net-Core-WebApi-SSL\\coreSSL.csproj",
         "projectName": "coreSSL",
-        "projectPath": "G:\\Classes\\PWA-Ionic\\01 Introduction\\coreSSL\\coreSSL.csproj",
+        "projectPath": "g:\\Classes\\PWA-Ionic\\01 Introduction\\Net-Core-WebApi-SSL\\coreSSL.csproj",
         "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "G:\\Classes\\PWA-Ionic\\01 Introduction\\coreSSL\\obj\\",
+        "outputPath": "g:\\Classes\\PWA-Ionic\\01 Introduction\\Net-Core-WebApi-SSL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
