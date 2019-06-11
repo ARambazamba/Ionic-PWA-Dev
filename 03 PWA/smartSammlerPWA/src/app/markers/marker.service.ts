@@ -2,9 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { MediaChange, ObservableMedia } from "@angular/flex-layout";
 import { Router } from "@angular/router";
-import { BehaviorSubject, Observable } from "rxjs";
+import { BehaviorSubject, Observable, Subscription } from "rxjs";
 import { map } from "rxjs/operators";
-import { Subscription } from "rxjs/Subscription";
 import { Marker } from "../shared/model";
 import { environment } from "../../environments/environment";
 

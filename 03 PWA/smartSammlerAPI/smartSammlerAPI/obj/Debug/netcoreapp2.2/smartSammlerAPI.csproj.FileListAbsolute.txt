@@ -12,3 +12,17 @@ G:\Classes\PWA-Ionic\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp
 G:\Classes\PWA-Ionic\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.RazorTargetAssemblyInfo.cache
 G:\Classes\PWA-Ionic\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.dll
 G:\Classes\PWA-Ionic\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.pdb
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\bin\Debug\netcoreapp2.2\smartSammlerAPI.deps.json
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\bin\Debug\netcoreapp2.2\smartSammlerAPI.runtimeconfig.json
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\bin\Debug\netcoreapp2.2\smartSammlerAPI.runtimeconfig.dev.json
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\bin\Debug\netcoreapp2.2\smartSammlerAPI.dll
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\bin\Debug\netcoreapp2.2\smartSammlerAPI.pdb
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.csprojAssemblyReference.cache
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.csproj.CoreCompileInputs.cache
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.RazorAssemblyInfo.cache
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.RazorAssemblyInfo.cs
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.AssemblyInfoInputs.cache
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.AssemblyInfo.cs
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.RazorTargetAssemblyInfo.cache
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.dll
+G:\Classes\Ionic-PWA-Dev\03 PWA\smartSammlerAPI\smartSammlerAPI\obj\Debug\netcoreapp2.2\smartSammlerAPI.pdb

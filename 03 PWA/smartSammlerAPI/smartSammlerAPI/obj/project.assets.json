@@ -11348,11 +11348,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Classes\\PWA-Ionic\\03 PWA\\smartSammlerAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
+      "projectUniqueName": "G:\\Classes\\Ionic-PWA-Dev\\03 PWA\\smartSammlerAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
       "projectName": "smartSammlerAPI",
-      "projectPath": "G:\\Classes\\PWA-Ionic\\03 PWA\\smartSammlerAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
+      "projectPath": "G:\\Classes\\Ionic-PWA-Dev\\03 PWA\\smartSammlerAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
       "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-      "outputPath": "G:\\Classes\\PWA-Ionic\\03 PWA\\smartSammlerAPI\\smartSammlerAPI\\obj\\",
+      "outputPath": "G:\\Classes\\Ionic-PWA-Dev\\03 PWA\\smartSammlerAPI\\smartSammlerAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
