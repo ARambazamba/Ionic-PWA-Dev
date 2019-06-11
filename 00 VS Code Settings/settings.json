@@ -1,28 +1,34 @@
 {
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Cobalt2",
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-    "git.autofetch": true,
-    "vsicons.projectDetection.autoReload": true,
-    "window.zoomLevel": 1,
-    "problems.autoReveal": false,
-    "workbench.editor.enablePreview": false,
-    "editor.wordWrap": "on",
-    "editor.minimap.enabled": false,
-    "problems.decorations.enabled": false,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "editor.formatOnSave": true,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.historyExplorer.enabled": true,
-    "gitlens.defaultDateStyle": "absolute",
-    "css_peek.searchFileExtensions": [
-        ".css",
-        ".scss"
-    ],
-    "html-css-class-completion.enableEmmetSupport": true
+  "workbench.startupEditor": "none",
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "window.zoomLevel": 1,
+  "problems.autoReveal": false,
+  "workbench.editor.enablePreview": false,
+  "window.restoreWindows": "none",
+  "files.hotExit": "off",
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "problems.decorations.enabled": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.formatOnSave": true,
+  "css_peek.searchFileExtensions": [".css", ".scss"],
+  "html-css-class-completion.enableEmmetSupport": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.editor.restoreViewState": false,
+  "workbench.colorTheme": "GitHub Plus",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "bracket-pair-colorizer-2.colors": ["Red", "Yellow", "Orange", "Pink"],
+  "csharp.format.enable": true,
+  "workbench.colorCustomizations": {
+    "terminal.ansiBrightBlack": "#11b9b9"
+  },
+  "editor.tokenColorCustomizations": {
+    "comments": "#47c7e7"
+  },
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line"
 }
