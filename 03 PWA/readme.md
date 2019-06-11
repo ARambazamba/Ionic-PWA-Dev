@@ -45,10 +45,12 @@ ng build --prod [--watch] [--delete-output-path false]
 
 ## Deploy to Firebase
 
+```
 npm i -g firebase-tools
 firebase login
 firebase init
 firebase deploy
+```
 
 ### Firebase Messaging
 
