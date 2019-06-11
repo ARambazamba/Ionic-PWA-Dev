@@ -30,8 +30,9 @@ cordova run browser | ios | android
 
 ### Manage Plugins
 
-- [Find Plugin using Cordova Plugin Search](https://cordova.apache.org/plugins/)
-- Add Plugin:
+[Find Plugin using Cordova Plugin Search](https://cordova.apache.org/plugins/)
+
+Add Plugin:
 
 ```
 cordova plugin add [plugin]
