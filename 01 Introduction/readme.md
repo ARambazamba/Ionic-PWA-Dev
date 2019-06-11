@@ -10,12 +10,11 @@ Enable Self Signed Cert Trust in Chrome: `chrome://flags/#allow-insecure-localho
 
 ### Generate a Trusted SSL Certificate
 
-This repository contains a script that will generate a trusted ssl certificate which can be used for local software development.
+Create a certifcate for Angular: Go to `.\create-certs`. Execute:
 
-```
-git clone https://github.com/RubenVermeulen/generate-trusted-ssl-certificate.git
-cd <PATH_TO_REPO_FOLDER>/generate-trusted-ssl-certificate
+``
 bash generate.sh
+
 ```
 
 > Bash is available on Windows Machines if you have installed [Git Bash](https://git-scm.com/downloads)
@@ -25,6 +24,7 @@ bash generate.sh
 You can adjust the `[dn]` part of the `openssl-custom.cnf` file to whatever you prefer.
 
 ```
+
 [dn]
 C = <COUNTRY>
 ST = <STATE>
@@ -33,7 +33,8 @@ O = <ORGANIZATION>
 OU = <ORGANIZATION_UNIT>
 emailAddress = <EMAIL_ADDRESS>
 CN = <HOSTNAME / IP_ADDRESS>
-```
+
+````
 
 ![create-ssl](_images/create-ssl.gif)
 
@@ -48,11 +49,11 @@ CN = <HOSTNAME / IP_ADDRESS>
         "sslKey": "/ssl/server.key",
         "sslCert": "/ssl/server.crt"
     },
-```
+````
 
 ## Configure .NET Core with SSL
 
-Create a \*.pfx certificate: Run `createCert4Core.ps1` using PowerShell
+Create a \*.pfx certificate: Run `.\create-certs\createCert4Core.ps1` using PowerShell
 
 Add section to `appsettings.json`:
 
