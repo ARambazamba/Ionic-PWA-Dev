@@ -18,23 +18,27 @@ using NLog.Extensions.Logging;
 using NLog.Web;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace SkillsApi {
-    public class Startup {
+namespace SkillsApi
+{
+    public class Startup
+    {
 
         private readonly IHostingEnvironment env;
 
-        public Startup (IHostingEnvironment environment) {
+        public Startup(IHostingEnvironment environment)
+        {
             env = environment;
         }
 
-        public void ConfigureServices (IServiceCollection services) {
+        public void ConfigureServices(IServiceCollection services)
+        {
 
             //Config
-            IConfigurationBuilder cfgBuilder = new ConfigurationBuilder ()
-                .SetBasePath (env.ContentRootPath)
-                .AddJsonFile ("appsettings.json");
-            IConfigurationRoot configuration = cfgBuilder.Build ();
-            services.AddSingleton (typeof (IConfigurationRoot), configuration);
+            IConfigurationBuilder cfgBuilder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json");
+            IConfigurationRoot configuration = cfgBuilder.Build();
+            services.AddSingleton(typeof(IConfigurationRoot), configuration);
 
             //EF
 
@@ -45,19 +49,20 @@ namespace SkillsApi {
 
             // SQLite ... use "SQLServerDBConnection" ConString
             var conStrLite = configuration["ConnectionStrings:SQLiteDBConnection"];
-            services.AddEntityFrameworkSqlite ().AddDbContext<SkillDBContext> (options => options.UseSqlite (conStrLite));
+            services.AddEntityFrameworkSqlite().AddDbContext<SkillDBContext>(options => options.UseSqlite(conStrLite));
 
             //SignalR
-            services.AddSignalR ();
+            services.AddSignalR();
 
             //Cors
 
-            services.AddCors (options => {
-                options.AddPolicy ("AllowAll",
-                    builder => builder.AllowAnyOrigin ()
-                    .AllowAnyMethod ()
-                    .AllowAnyHeader ()
-                    .AllowCredentials ());
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
             });
 
             // services.AddCors (options => {
@@ -72,10 +77,12 @@ namespace SkillsApi {
             var realm = configuration["Authentication:Firebase:Realm"];
 
             services
-                .AddAuthentication (JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer (options => {
+                .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
                     options.Authority = $"https://securetoken.google.com/{realm}";
-                    options.TokenValidationParameters = new TokenValidationParameters {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
                         ValidateIssuer = true,
                         ValidIssuer = $"https://securetoken.google.com/{realm}",
                         ValidateAudience = true,
@@ -85,62 +92,71 @@ namespace SkillsApi {
                 });
 
             //Swagger
-            services.AddSwaggerGen (c => {
-                c.SwaggerDoc ("v1", new Info { Title = "Skills API", Version = "v1" });
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Skills API", Version = "v1" });
             });
 
-            services.AddMvc ();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure (IApplicationBuilder app, ILoggerFactory loggerFactory) {
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
             //Logging
-            loggerFactory.AddNLog ();
-            env.ConfigureNLog ("nlog.config");
+            loggerFactory.AddNLog();
+            env.ConfigureNLog("nlog.config");
 
-            var jsnlogConfiguration = new JsnlogConfiguration ();
-            app.UseJSNLog (new LoggingAdapter (loggerFactory), jsnlogConfiguration);
+            var jsnlogConfiguration = new JsnlogConfiguration();
+            app.UseJSNLog(new LoggingAdapter(loggerFactory), jsnlogConfiguration);
 
-            if (env.IsDevelopment ()) {
-                app.UseDeveloperExceptionPage ();
-                app.UseStatusCodePages ();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
             }
 
             //Startup File
-            var options = new DefaultFilesOptions ();
-            options.DefaultFileNames.Clear ();
-            options.DefaultFileNames.Add ("index.html");
-            app.UseDefaultFiles (options);
+            var options = new DefaultFilesOptions();
+            options.DefaultFileNames.Clear();
+            options.DefaultFileNames.Add("index.html");
+            app.UseDefaultFiles(options);
 
-            if (env.IsDevelopment ()) {
-                app.UseStaticFiles (new StaticFileOptions {
-                    OnPrepareResponse = context => {
+            if (env.IsDevelopment())
+            {
+                app.UseStaticFiles(new StaticFileOptions
+                {
+                    OnPrepareResponse = context =>
+                    {
                         context.Context.Response.Headers["Cache-Control"] = "no-cache, no-store";
                         context.Context.Response.Headers["Pragma"] = "no-cache";
                         context.Context.Response.Headers["Expires"] = "-1";
                     }
                 });
-            } else { app.UseStaticFiles (); }
+            }
+            else { app.UseStaticFiles(); }
 
             //Cors
-            app.UseCors ("AllowAll");
+            app.UseCors("AllowAll");
 
             //SignalR
-            app.UseSignalR (routes => {
-                routes.MapHub<SkillHub> ("/skillhub");
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<SkillHub>("/skillhub");
             });
 
             //Swagger
-            app.UseSwagger ();
-            app.UseSwaggerUI (c => {
-                c.SwaggerEndpoint ("/swagger/v1/swagger.json", "Skills API V1");
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Skills API V1");
                 c.RoutePrefix = string.Empty;
             });
 
             // Uncomment this line to enable auth
             // app.UseAuthentication();
 
-            app.UseMvcWithDefaultRoute ();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
