@@ -1,6 +1,4 @@
-# Accessing Device
-
-## Native Device Access using Cordova
+# Cordova
 
 ### Cordova Native App
 
@@ -103,11 +101,11 @@ cordova run ios | android
 
 > Note: Make sure you have to `ANDROID_HOME` env. var. set to `C:\Users\%USER%\AppData\Local\Android\Sdk`
 
-## HTML APIs
+# HTML APIs
 
 [HTLM Apis Collection](https://girliemac.com/presentation-slides/html5-mobile-approach/deviceAPIs.html)
 
-## Native Script
+# Native Script
 
 [Native Script](https://www.nativescript.org/)
 
