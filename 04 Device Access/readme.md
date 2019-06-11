@@ -6,13 +6,13 @@
 
 [Cordova Home](https://cordova.apache.org/)
 
-Setup:
+Install Cordova CLI:
 
 ```
 npm install -g cordova
 ```
 
-Create a project:
+Scaffold project:
 
 ```
 cordova create PROJECTNAME
@@ -33,6 +33,10 @@ cordova run ios | android
 [Cordova Plugin Gallery](https://cordova.apache.org/plugins/)
 
 ### Cordova Wrap Angular
+
+Add Cordova to existing Angular App
+
+cordova create smart-sammler-pwa at.yourdomain.sammler SmartSammler
 
 ## HTML APIs
 
