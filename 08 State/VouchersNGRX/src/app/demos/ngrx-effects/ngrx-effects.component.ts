@@ -3,7 +3,7 @@ import { MatTableDataSource } from "@angular/material";
 import { select, Store } from "@ngrx/store";
 import { Voucher } from "../../shared/model/model";
 import * as demoActions from "../state/demo.actions.creator";
-import * as fromDemo from "../state/demo.reducer.typed";
+import * as fromDemo from "../state/state";
 
 @Component({
   selector: "app-ngrx-effects",

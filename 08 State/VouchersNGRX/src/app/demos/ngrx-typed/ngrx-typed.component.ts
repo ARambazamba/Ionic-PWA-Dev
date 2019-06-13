@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Store, select } from "@ngrx/store";
 import { TOGGLE_SHOW_FILTER, UPDATE_FOOD } from "../state/demo.actions";
-import * as fromDemo from "../state/demo.reducer.typed";
+import * as fromDemo from "../state/state";
 
 @Component({
   selector: "app-ngrx-typed",
