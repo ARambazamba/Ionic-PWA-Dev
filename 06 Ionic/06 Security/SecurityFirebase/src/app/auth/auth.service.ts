@@ -12,8 +12,10 @@ export class AuthService {
     });
   }
 
-  private usrToken: string;
-  public Token: BehaviorSubject<string> = new BehaviorSubject<string>("");
+  private usrToken: string = "";
+  public Token: BehaviorSubject<string> = new BehaviorSubject<string>(
+    this.usrToken
+  );
 
   private fbUser: firebase.User = null;
   public User: BehaviorSubject<firebase.User> = new BehaviorSubject(
@@ -36,14 +38,6 @@ export class AuthService {
   private setToken(token) {
     this.usrToken = token;
     this.Token.next(this.usrToken);
-  }
-
-  isAuthenticated(): Observable<boolean> {
-    this.User.subscribe(user => {
-      let auth: boolean = user == null ? false : true;
-      return of(auth);
-    });
-    return of(false);
   }
 
   createUser(email: string, password: string): Promise<any> {

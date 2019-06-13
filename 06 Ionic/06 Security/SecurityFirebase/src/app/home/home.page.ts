@@ -8,8 +8,9 @@ import { AuthService } from "../auth/auth.service";
 })
 export class HomePage {
   constructor(private auth: AuthService) {
-    auth.isAuthenticated().subscribe(val => {
-      // this.loggedIn = val;
+    auth.Token.subscribe(val => {
+      this.loggedIn = val != null;
+      console.log("auth changed to", val);
     });
   }
 

@@ -11,7 +11,6 @@ export class RegisterComponent implements OnInit {
   constructor(public as: AlertService, public auth: AuthService) {}
 
   reg = {
-    displayName: "",
     email: "",
     pwd: "",
     pwd2: ""
@@ -25,14 +24,10 @@ export class RegisterComponent implements OnInit {
       this.reg.pwd = "";
       this.reg.pwd2 = "";
     } else {
-      if (this.reg.displayName == "") {
-        this.reg.displayName = this.reg.email;
-      }
-
       this.auth
         .createUser(this.reg.email, this.reg.pwd)
         .then((user: firebase.User) => {
-          this.as.displayAlert(user.email, "Acct created - Please Login");
+          console.log("Acct created", user.email);
         });
     }
   }

@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
       this.alert.displayAlert("Error !", "You must enter email and password");
     } else {
       this.auth.logOn(this.login.email, this.login.pwd).then(returned => {
-        this.alert.displayAlert("Logon", "you are now logged on");
+        console.log("Authenticated");
         this.navCtrl.navigateRoot("/");
       });
     }
