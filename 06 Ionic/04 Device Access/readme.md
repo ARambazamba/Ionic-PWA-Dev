@@ -4,6 +4,23 @@
 
 [Ionic Native](https://ionicframework.com/docs/native/overview)
 
+Add a platform
+
+```
+ionic cordova platform add browser | android | ios
+```
+
+Add a plugin
+
+ionic cordova plugin add cordova-plugin-camera
+npm install @ionic-native/camera
+
+Run
+
+```
+ionic cordova run browser | android | ios
+```
+
 ## Capacitor
 
 Scaffold an Ionic Project using Capacitor:
