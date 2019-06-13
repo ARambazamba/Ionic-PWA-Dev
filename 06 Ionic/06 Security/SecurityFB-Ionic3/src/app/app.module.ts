@@ -17,12 +17,13 @@ import { AuthService } from "../providers/auth-service/auth-service";
 import { MyApp } from "./app.component";
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyDd_5fwjov1rt8szeRIf2CQjaED4A6YdXY",
-  authDomain: "sighthoundlovers.firebaseapp.com",
-  databaseURL: "https://sighthoundlovers.firebaseio.com",
-  projectId: "sighthoundlovers",
-  storageBucket: "sighthoundlovers.appspot.com",
-  messagingSenderId: "361546095438"
+  apiKey: "AIzaSyDKOBVweF7puu4P60AiQUFTaspqlVXvFTM",
+  authDomain: "skills-5fb49.firebaseapp.com",
+  databaseURL: "https://skills-5fb49.firebaseio.com",
+  projectId: "skills-5fb49",
+  storageBucket: "skills-5fb49.appspot.com",
+  messagingSenderId: "1005178568143",
+  appId: "1:1005178568143:web:506dadae903b5a79"
 };
 
 @NgModule({

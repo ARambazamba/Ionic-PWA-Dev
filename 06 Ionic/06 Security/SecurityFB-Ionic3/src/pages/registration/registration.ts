@@ -49,9 +49,6 @@ export class RegistrationPage {
         .createUser(this.reg.email, this.reg.pwd)
         .then((user: firebase.User) => {
           this.as.displayAlert(user.email, "Acct created - Please Login");
-
-          let p = { displayName: this.reg.displayName, photoURL: "" };
-          user.updateProfile(p);
         });
     }
   }

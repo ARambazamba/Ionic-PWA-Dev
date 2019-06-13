@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="secondary" text-center>
+    <div class="header">Sighthound Lovers</div>
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="loggedIn">
+    <ion-button expang="full">
+      <ion-icon name="contact">
+        {{ email }}
+      </ion-icon>
+    </ion-button>
+    <ion-button expang="full" (click)="signOff()">Sign Out</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="!loggedIn"> </ion-content>
+
+<ion-content *ngIf="loggedIn">
+  <ion-list *ngFor="let menu of menuData">
+    <ion-card [href]="menu.Url" text-center>
+      <ion-card-title>{{ menu.title }}</ion-card-title>
+      <ion-card-content>
+        <img src="{{ menu.pic }}" class="logo" />
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
