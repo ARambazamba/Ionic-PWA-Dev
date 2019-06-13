@@ -4,5 +4,6 @@ export const environment = {
   token: "QeOv74uiEDNz7QM91bjYKc82VgS2",
   apiUrl: "http://localhost:5000/",
   markdownPath: "/assets/markdown/",
-  initDataservice: false
+  //TODO: Change initDataservice
+  initDataservice: true
 };

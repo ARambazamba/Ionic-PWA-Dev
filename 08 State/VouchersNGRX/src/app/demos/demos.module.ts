@@ -22,8 +22,9 @@ import { VouchersEffects } from "./state/demo.effects";
 import { MarkdownModule } from "ngx-markdown";
 import { HttpClient } from "@angular/common/http";
 
-import { demo_slice, reducer } from "./state/demo.reducer.typed";
-// import { reducer, demo_slice } from "./state/demo.reducer";
+//TODO: Switch imports - use 2nd import starting with "Using Action Creators"
+import { reducer, demo_slice } from "./state/demo.reducer";
+// import { demo_slice, reducer } from "./state/demo.reducer.typed";
 
 const demoRoutes: Routes = [
   {
@@ -51,6 +52,7 @@ const demoRoutes: Routes = [
     RouterModule.forChild(demoRoutes),
     MaterialModule,
     NgxChartsModule,
+    //TODO: Feature Store
     StoreModule.forFeature(demo_slice, reducer),
     EffectsModule.forFeature([VouchersEffects]),
     MarkdownModule.forRoot({

@@ -1,3 +1,5 @@
+//TODO: AppState
+
 export interface AppState {
   title: string;
   showSidebar: boolean;

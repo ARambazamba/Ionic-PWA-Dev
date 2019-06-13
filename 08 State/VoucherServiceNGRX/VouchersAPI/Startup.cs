@@ -38,17 +38,12 @@ namespace Vouchers
             var configuration = cfgBuilder.Build();
             services.Configure<VouchersConfig>(configuration);
             services.AddSingleton(typeof(IConfigurationRoot), configuration);
+            var conStr = configuration["ConnectionStrings:SQLServerDBConnection"];
 
             //EF
-
-            // SQL Server ... use "SQLServerDBConnection" ConString
-            // var conStr = configuration["ConnectionStrings:SQLServerDBConnection"];
-            // services.AddEntityFrameworkSqlServer ()
-            //     .AddDbContext<SkillDBContext> (options => options.UseSqlServer(conStr));
-
-            // SQLite ... use "SQLServerDBConnection" ConString
-            var conStrLite = configuration["ConnectionStrings:SQLiteDBConnection"];
-            services.AddEntityFrameworkSqlite().AddDbContext<VouchersDBContext>(options => options.UseSqlite(conStrLite));
+            services.AddEntityFrameworkSqlServer()
+                .AddDbContext<VouchersDBContext>(options => options.UseSqlServer(conStr));
+            services.AddScoped<IVouchersRepository, VouchersRepository>();
 
             //Simple Windows Auth
             services.AddAuthentication(HttpSysDefaults.AuthenticationScheme);
@@ -71,7 +66,7 @@ namespace Vouchers
                     ValidateLifetime = true
                 };
             });
-
+         
             //CORS
             //Required if you develop Angular on a seperate proj
             // For specific URL ie. your Angular CLI Frontend use: 
@@ -152,7 +147,7 @@ namespace Vouchers
             });
 
             //Auth
-            app.UseAuthentication();
+            // app.UseAuthentication();
 
             app.UseMvc();
         }
