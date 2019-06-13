@@ -1,8 +1,4 @@
-<ion-content padding>
-  <ion-toolbar>
-    <ion-title>Sighthound lovers</ion-title>
-  </ion-toolbar>
-
+<ion-card>
   <ion-item>
     <ion-label floating color="primary">Email Address</ion-label>
     <ion-input type="email" [(ngModel)]="login.email" name="email"></ion-input>
@@ -18,15 +14,7 @@
   </ion-item>
   <ion-row style="height: 20px"></ion-row>
 
-  <button ion-button color="secondary" full (click)="signIn()">Sign In</button>
-
-  <ion-row style="height: 20px"></ion-row>
-  <p text-center>Register if you have not done yet ...</p>
-  <button ion-button color="secondary" full (click)="goToRegistration()">
-    Register
-  </button>
-  <ion-row style="height: 20px"></ion-row>
-  <button ion-button color="secondary" full (click)="goToRootPage()">
-    Never mind ...
-  </button>
-</ion-content>
+  <ion-button color="secondary" expand="full" (click)="signIn()"
+    >Sign In</ion-button
+  >
+</ion-card>
