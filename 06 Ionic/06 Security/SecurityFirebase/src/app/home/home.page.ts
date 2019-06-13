@@ -20,7 +20,8 @@ export class HomePage {
     { title: "Account", pic: "assets/imgs/beach.jpg", Url: "account" },
     { title: "About", pic: "assets/imgs/beach.jpg", Url: "about" }
   ];
-  showLogin() {}
 
-  signOff() {}
+  signOff() {
+    this.auth.logOff();
+  }
 }
