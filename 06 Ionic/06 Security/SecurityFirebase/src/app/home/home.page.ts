@@ -7,7 +7,11 @@ import { AuthService } from "../auth/auth.service";
   styleUrls: ["home.page.scss"]
 })
 export class HomePage {
-  constructor(auth: AuthService) {}
+  constructor(private auth: AuthService) {
+    auth.isAuthenticated().subscribe(val => {
+      this.loggedIn = val;
+    });
+  }
 
   loggedIn = false;
   email: string;

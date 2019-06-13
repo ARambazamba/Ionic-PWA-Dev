@@ -1,37 +1,71 @@
 import { Injectable } from "@angular/core";
 import { AngularFireAuth } from "@angular/fire/auth";
-import { AlertService } from "../shared/alert.service";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, Observable, of } from "rxjs";
 
 @Injectable({
   providedIn: "root"
 })
 export class AuthService {
-  constructor(private afAuth: AngularFireAuth, public as: AlertService) {}
+  constructor(private fireAuth: AngularFireAuth) {
+    this.fireAuth.auth.onAuthStateChanged(user => {
+      this.setUserToken(user);
+    });
+  }
 
-  private fbUser: any = null;
-  public User: BehaviorSubject<any> = new BehaviorSubject(this.fbUser);
+  private usrToken: string;
+  public Token: BehaviorSubject<string> = new BehaviorSubject<string>("");
+
+  private fbUser: firebase.User = null;
+  public User: BehaviorSubject<firebase.User> = new BehaviorSubject(
+    this.fbUser
+  );
+
+  private setUserToken(user) {
+    this.fbUser = user;
+    this.User.next(this.fbUser);
+
+    if (user != null) {
+      this.fbUser.getIdToken().then(token => {
+        this.setToken(token);
+      });
+    } else {
+      this.setToken(null);
+    }
+  }
+
+  private setToken(token) {
+    this.usrToken = token;
+    this.Token.next(this.usrToken);
+  }
+
+  isAuthenticated(): Observable<boolean> {
+    this.User.subscribe(user => {
+      let auth: boolean = user == null ? false : true;
+      return of(auth);
+    });
+    return of(false);
+  }
 
   createUser(email: string, password: string): Promise<any> {
-    return this.afAuth.auth.createUserWithEmailAndPassword(email, password);
+    return this.fireAuth.auth.createUserWithEmailAndPassword(email, password);
   }
 
   logOn(user, password, onSuccess?) {
-    return this.afAuth.auth
+    return this.fireAuth.auth
       .signInWithEmailAndPassword(user, password)
       .then(onSuccess)
       .catch(err => {
-        this.as.displayAlert("Error logging in", err);
+        console.log("Error logging in", err);
         return err;
       });
   }
 
   logOff() {
-    this.afAuth.auth
+    this.fireAuth.auth
       .signOut()
-      .then(loggedOut =>
-        this.as.displayAlert("Logged out", "Come back and visit soon")
-      )
-      .catch(err => this.as.displayAlert("Error logging out", err));
+      .then(() => {
+        this.setUserToken(null);
+      })
+      .catch(err => console.log("Error logging out", err));
   }
 }
