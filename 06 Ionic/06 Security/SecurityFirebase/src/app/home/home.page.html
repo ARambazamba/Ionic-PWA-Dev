@@ -1,15 +1,11 @@
 <ion-header>
   <ion-toolbar color="secondary" text-center>
     <div class="header">Sighthound Lovers</div>
-  </ion-toolbar>
-
-  <ion-toolbar *ngIf="loggedIn">
-    <ion-button expang="full">
-      <ion-icon name="contact">
-        {{ email }}
-      </ion-icon>
-    </ion-button>
-    <ion-button expang="full" (click)="signOff()">Sign Out</ion-button>
+    <ion-buttons slot="secondary" *ngIf="loggedIn">
+      <ion-button (click)="signOff()">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

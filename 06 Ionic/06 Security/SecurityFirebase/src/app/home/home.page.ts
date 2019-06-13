@@ -9,11 +9,11 @@ import { AuthService } from "../auth/auth.service";
 export class HomePage {
   constructor(private auth: AuthService) {
     auth.isAuthenticated().subscribe(val => {
-      this.loggedIn = val;
+      // this.loggedIn = val;
     });
   }
 
-  loggedIn = false;
+  loggedIn = true;
   email: string;
   menuData = [
     { title: "Hounds", pic: "assets/imgs/beach.jpg", Url: "hounds" },
