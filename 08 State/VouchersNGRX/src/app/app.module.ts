@@ -58,7 +58,7 @@ registerLocaleData(localeDe);
     MaterialModule,
     SharedModule,
     NgxChartsModule,
-    //TODO: Root Module Import
+    //TODO: Notice Root Module Import
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({

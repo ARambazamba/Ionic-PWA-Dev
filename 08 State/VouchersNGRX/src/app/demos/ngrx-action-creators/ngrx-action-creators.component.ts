@@ -14,6 +14,7 @@ export class NgrxActionCreatorsComponent implements OnInit {
   showFilterPane: boolean = false;
   food: string;
 
+  // TODO: Demo: Using Action Creators
   ngOnInit() {
     this.store.pipe(select(fromDemo.getShowFilter)).subscribe(hide => {
       this.showFilterPane = hide;

@@ -1,4 +1,4 @@
-//TODO: AppState
+//TODO: Notice AppState Definition
 
 export interface AppState {
   title: string;

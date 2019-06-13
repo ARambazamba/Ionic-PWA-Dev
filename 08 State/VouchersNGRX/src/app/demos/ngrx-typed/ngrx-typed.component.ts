@@ -14,6 +14,7 @@ export class NgRxTypedComponent implements OnInit {
   showFilterPane: boolean = false;
   food: string;
 
+  // TODO: Demo: Typed NgRX
   ngOnInit() {
     this.store.pipe(select(fromDemo.getShowFilter)).subscribe(showSum => {
       this.showFilterPane = showSum;

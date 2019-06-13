@@ -1,4 +1,4 @@
-//TODO: Reducer
+//TODO: Notice Root Reducer
 
 import { AppState } from "./app.state";
 
