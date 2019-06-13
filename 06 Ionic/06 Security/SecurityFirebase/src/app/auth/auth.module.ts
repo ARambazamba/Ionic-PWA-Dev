@@ -1,14 +1,15 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { FormsModule } from "@angular/forms";
-import { IonicModule } from "@ionic/angular";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
-import { AuthService } from "./auth.service";
+import { FormsModule } from "@angular/forms";
+import { IonicModule } from "@ionic/angular";
+
+const comps = [LoginComponent, RegisterComponent];
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule],
-  declarations: [LoginComponent, RegisterComponent],
-  providers: [AuthService]
+  declarations: comps,
+  exports: comps,
+  imports: [FormsModule, CommonModule, IonicModule]
 })
 export class AuthModule {}

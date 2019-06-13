@@ -13,7 +13,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="!loggedIn"> </ion-content>
+<ion-content *ngIf="!loggedIn">
+  <app-login></app-login>
+</ion-content>
 
 <ion-content *ngIf="loggedIn">
   <ion-list *ngFor="let menu of menuData">

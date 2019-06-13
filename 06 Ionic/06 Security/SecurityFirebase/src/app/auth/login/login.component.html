@@ -1,3 +1,32 @@
-<p>
-  login works!
-</p>
+<ion-content padding>
+  <ion-toolbar>
+    <ion-title>Sighthound lovers</ion-title>
+  </ion-toolbar>
+
+  <ion-item>
+    <ion-label floating color="primary">Email Address</ion-label>
+    <ion-input type="email" [(ngModel)]="login.email" name="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating color="primary">Password</ion-label>
+    <ion-input
+      type="password"
+      [(ngModel)]="login.pwd"
+      name="passWrd"
+    ></ion-input>
+  </ion-item>
+  <ion-row style="height: 20px"></ion-row>
+
+  <button ion-button color="secondary" full (click)="signIn()">Sign In</button>
+
+  <ion-row style="height: 20px"></ion-row>
+  <p text-center>Register if you have not done yet ...</p>
+  <button ion-button color="secondary" full (click)="goToRegistration()">
+    Register
+  </button>
+  <ion-row style="height: 20px"></ion-row>
+  <button ion-button color="secondary" full (click)="goToRootPage()">
+    Never mind ...
+  </button>
+</ion-content>
