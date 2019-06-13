@@ -63,6 +63,12 @@ Create `www` folder:
 npm run build | ionic build
 ```
 
+Initialize Capazitor
+
+```
+npx cap init
+```
+
 Add Platform
 
 ```
