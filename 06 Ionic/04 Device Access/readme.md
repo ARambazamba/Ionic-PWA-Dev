@@ -1,6 +1,6 @@
 # Ionic Device Access
 
-## Cordova Wrapper
+## Cordova
 
 [Ionic Native](https://ionicframework.com/docs/native/overview)
 
@@ -21,6 +21,32 @@ Run
 
 ```
 ionic cordova run browser | android | ios
+```
+
+Steps to use Plugin
+
+- Import Plugin:
+
+```
+import { Camera, CameraOptions } from "@ionic-native/camera/ngx";
+```
+
+- Add Plugin as Provider:
+
+```
+@Component({
+  selector: "app-camera",
+  templateUrl: "./camera.page.html",
+  styleUrls: ["./camera.page.scss"],
+  providers: [Camera] // 2. Register Serive
+}
+```
+
+Inject Plugin
+
+```
+  constructor(
+    private camera: Camera,
 ```
 
 ## Capacitor

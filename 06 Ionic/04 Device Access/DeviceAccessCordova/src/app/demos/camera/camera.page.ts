@@ -3,19 +3,20 @@ import { Picture } from "src/app/shared/model";
 import { environment } from "src/environments/environment";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { ToastController } from "@ionic/angular";
-import { Camera, CameraOptions } from "@ionic-native/camera/ngx";
+import { Camera, CameraOptions } from "@ionic-native/camera/ngx"; // 1. Import
+import { from } from "rxjs";
 
 @Component({
   selector: "app-camera",
   templateUrl: "./camera.page.html",
   styleUrls: ["./camera.page.scss"],
-  providers: [Camera]
+  providers: [Camera] // 2. Register Serive
 })
 export class CameraPage implements OnInit {
   ngOnInit() {}
 
   constructor(
-    private camera: Camera,
+    private camera: Camera, // 3. Dependency Injection
     private httpClient: HttpClient,
     public toastCtrl: ToastController
   ) {}
@@ -37,8 +38,10 @@ export class CameraPage implements OnInit {
       quality: 50,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
+      mediaType: this.camera.MediaType.PICTURE,
+      correctOrientation: true
     };
+
     this.camera.getPicture(options).then(
       imageData => {
         this.base64Image = "data:image/jpeg;base64," + imageData;
