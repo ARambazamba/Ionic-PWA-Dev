@@ -2,7 +2,7 @@ import { Voucher } from "../../shared/model/model";
 import * as fromRoot from "../../state/app.state";
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 
-// DemoState Slice
+//TODO: Notice DemoState Slice
 
 export const demo_slice = "demo_slice";
 
@@ -25,6 +25,7 @@ export const initialDemoState: DemoState = {
   currVoucherId: null,
   favFood: "Russian Beef Stroganoff with Mashed Potatoes"
 };
+
 //Define Selectors ... Order matters!
 
 const getDemoFeatureState = createFeatureSelector<DemoState>(demo_slice);
