@@ -12,8 +12,10 @@ ionic cordova platform add browser | android | ios
 
 Add a plugin
 
+```
 ionic cordova plugin add cordova-plugin-camera
 npm install @ionic-native/camera
+```
 
 Run
 
