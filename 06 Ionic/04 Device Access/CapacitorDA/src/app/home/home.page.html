@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>Demos</ion-list-header>
+    <ion-item *ngFor="let i of items" [href]="i.url" routerDirection="forward">
+      {{ i.name }}
+    </ion-item>
+  </ion-list>
+</ion-content>

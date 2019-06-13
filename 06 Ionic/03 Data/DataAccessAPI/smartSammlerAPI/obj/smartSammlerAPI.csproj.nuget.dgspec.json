@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Classes\\PWA-Ionic\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj": {}
+    "G:\\Classes\\Ionic-PWA-Dev\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj": {}
   },
   "projects": {
-    "G:\\Classes\\PWA-Ionic\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj": {
+    "G:\\Classes\\Ionic-PWA-Dev\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Classes\\PWA-Ionic\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
+        "projectUniqueName": "G:\\Classes\\Ionic-PWA-Dev\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
         "projectName": "smartSammlerAPI",
-        "projectPath": "G:\\Classes\\PWA-Ionic\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
+        "projectPath": "G:\\Classes\\Ionic-PWA-Dev\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
         "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "G:\\Classes\\PWA-Ionic\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\obj\\",
+        "outputPath": "G:\\Classes\\Ionic-PWA-Dev\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -3,6 +3,7 @@ import { NavController, NavParams, ToastController } from "@ionic/angular";
 import { Marker } from "src/shared/model";
 import { MarkerService } from "src/services/markers/markers";
 import { ActivatedRoute } from "@angular/router";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-marker-details",
@@ -14,13 +15,7 @@ export class MarkerDetailsPage implements OnInit {
     private route: ActivatedRoute,
     public ms: MarkerService,
     public toastCtrl: ToastController
-  ) {
-    this.route.params.subscribe(param => {
-      this.ms.getMarker(param["id"]).subscribe(m => {
-        this.marker = m;
-      });
-    });
-  }
+  ) {}
 
   marker: Marker = {
     id: 0,
@@ -34,10 +29,14 @@ export class MarkerDetailsPage implements OnInit {
     picture: null
   };
 
-  ngOnInit() {}
+  marker$: Observable<Marker>;
 
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad MarkerDetailsPage");
+  ngOnInit() {
+    this.route.params.subscribe(param => {
+      this.ms.getMarker(param["id"]).subscribe(m => {
+        this.marker = m;
+      });
+    });
   }
 
   showToast(msg: string) {

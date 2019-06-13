@@ -10754,11 +10754,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "g:\\Classes\\PWA-Ionic\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
+      "projectUniqueName": "G:\\Classes\\Ionic-PWA-Dev\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
       "projectName": "smartSammlerAPI",
-      "projectPath": "g:\\Classes\\PWA-Ionic\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
+      "projectPath": "G:\\Classes\\Ionic-PWA-Dev\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\smartSammlerAPI.csproj",
       "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-      "outputPath": "g:\\Classes\\PWA-Ionic\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\obj\\",
+      "outputPath": "G:\\Classes\\Ionic-PWA-Dev\\06 Ionic\\03 Data\\DataAccessAPI\\smartSammlerAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

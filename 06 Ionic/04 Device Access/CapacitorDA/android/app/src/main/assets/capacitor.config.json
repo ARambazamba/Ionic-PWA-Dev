@@ -1,0 +1,7 @@
+{
+  "appId": "at.integrations.capapp",
+  "appName": "CapApp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

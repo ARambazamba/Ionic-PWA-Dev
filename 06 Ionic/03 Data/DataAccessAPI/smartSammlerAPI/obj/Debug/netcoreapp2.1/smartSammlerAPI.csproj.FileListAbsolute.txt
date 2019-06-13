@@ -96,3 +96,17 @@ G:\Classes\PWA-Ionic\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\ne
 G:\Classes\PWA-Ionic\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.RazorTargetAssemblyInfo.cache
 G:\Classes\PWA-Ionic\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.dll
 G:\Classes\PWA-Ionic\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.pdb
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\bin\Debug\netcoreapp2.1\smartSammlerAPI.deps.json
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\bin\Debug\netcoreapp2.1\smartSammlerAPI.runtimeconfig.json
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\bin\Debug\netcoreapp2.1\smartSammlerAPI.runtimeconfig.dev.json
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\bin\Debug\netcoreapp2.1\smartSammlerAPI.dll
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\bin\Debug\netcoreapp2.1\smartSammlerAPI.pdb
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.csprojAssemblyReference.cache
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.csproj.CoreCompileInputs.cache
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.RazorAssemblyInfo.cache
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.RazorAssemblyInfo.cs
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.AssemblyInfoInputs.cache
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.AssemblyInfo.cs
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.RazorTargetAssemblyInfo.cache
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.dll
+G:\Classes\Ionic-PWA-Dev\06 Ionic\03 Data\DataAccessAPI\smartSammlerAPI\obj\Debug\netcoreapp2.1\smartSammlerAPI.pdb

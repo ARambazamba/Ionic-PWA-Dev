@@ -1,7 +1,0 @@
-{
-  "appId": "at.integrations.capdemo",
-  "appName": "capacitor-app",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "www"
-}
