@@ -1,41 +1,45 @@
 [
-	{
-		"url": "stateful",
-		"title": "Stateful Service",
-		"component": "StatefulComponent"
-	},
-	{
-		"url": "simpleds",
-		"title": "Simple DataService",
-		"component": "SimpleDataStoreComponent",
-		"markdown": "dataservice",
-		"mdonly": true
-	},
-	{
-		"url": "evtbus",
-		"title": "Event Bus",
-		"component": "EvtBusComponent",
-		"markdown": "ebus",
-		"mdonly": true
-	},
-	{
-		"url": "ngrxstore",
-		"title": "Using NgRX Store",
-		"component": "NgrxStoreComponent"
-	},
-	{
-		"url": "ngrxtyped",
-		"title": "Typed NgRX",
-		"component": "NgrxTypedComponent"
-	},
-	{
-		"url": "actioncreator",
-		"title": "Using Action Creators",
-		"component": "NgrxActionCreatorsComponent"
-	},
-	{
-		"url": "ngrxeffects",
-		"title": "Using NgRX Effects",
-		"component": "NgrxTypedComponent"
-	}
+  {
+    "url": "stateful",
+    "title": "Stateful Service",
+    "component": "StatefulComponent"
+  },
+  {
+    "url": "simpleds",
+    "title": "Simple DataService",
+    "component": "SimpleDataStoreComponent",
+    "markdown": "dataservice",
+    "mdonly": true
+  },
+  {
+    "url": "evtbus",
+    "title": "Event Bus",
+    "component": "EvtBusComponent",
+    "markdown": "ebus",
+    "mdonly": true
+  },
+  {
+    "url": "ngrxstore",
+    "title": "Using NgRX Store",
+    "component": "NgrxStoreComponent",
+    "markdown": "ngrxstore"
+  },
+  {
+    "url": "ngrxtyped",
+    "title": "Typed NgRX",
+    "component": "NgrxTypedComponent",
+    "markdown": "ngrxtyped"
+  },
+  {
+    "url": "actioncreator",
+    "title": "Using Action Creators",
+    "component": "NgrxActionCreatorsComponent",
+    "markdown": "actioncreators"
+  },
+  {
+    "url": "ngrxeffects",
+    "title": "Using NgRX Effects",
+    "component": "NgrxTypedComponent",
+    "markdown": "effects"
+  }
 ]
