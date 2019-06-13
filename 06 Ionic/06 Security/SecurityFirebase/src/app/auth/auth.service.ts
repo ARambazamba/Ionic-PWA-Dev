@@ -31,7 +31,7 @@ export class AuthService {
         this.setToken(token);
       });
     } else {
-      this.setToken(null);
+      this.setToken("");
     }
   }
 

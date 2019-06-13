@@ -14,7 +14,7 @@
   <app-register></app-register>
 </ion-content>
 
-<ion-content *ngIf="loggedIn">
+<ion-content>
   <ion-list *ngFor="let menu of menuData">
     <ion-card [href]="menu.Url" text-center>
       <ion-card-title>{{ menu.title }}</ion-card-title>

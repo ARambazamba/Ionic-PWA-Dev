@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { FbGuardService } from "./auth/fb-guard.service";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -7,7 +8,8 @@ const routes: Routes = [
   { path: "about", loadChildren: "./about/about.module#AboutPageModule" },
   {
     path: "account",
-    loadChildren: "./account/account.module#AccountPageModule"
+    loadChildren: "./account/account.module#AccountPageModule",
+    canActivate: [FbGuardService]
   },
   { path: "hounds", loadChildren: "./hounds/hounds.module#HoundsPageModule" }
 ];

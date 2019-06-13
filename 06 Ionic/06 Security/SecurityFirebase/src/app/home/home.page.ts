@@ -9,7 +9,7 @@ import { AuthService } from "../auth/auth.service";
 export class HomePage {
   constructor(private auth: AuthService) {
     auth.Token.subscribe(val => {
-      this.loggedIn = val != null;
+      this.loggedIn = val != "";
       console.log("auth changed to", val);
     });
   }
