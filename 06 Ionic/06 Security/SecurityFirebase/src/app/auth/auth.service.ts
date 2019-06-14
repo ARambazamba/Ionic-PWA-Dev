@@ -58,7 +58,7 @@ export class AuthService {
     this.fireAuth.auth
       .signOut()
       .then(() => {
-        this.setUserToken(null);
+        this.setUserToken("");
       })
       .catch(err => console.log("Error logging out", err));
   }
