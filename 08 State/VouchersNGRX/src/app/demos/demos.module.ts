@@ -23,7 +23,7 @@ import { MarkdownModule } from "ngx-markdown";
 import { HttpClient } from "@angular/common/http";
 
 //TODO: Switch imports - use 2nd import starting with "Using Action Creators"
-import { demo_slice } from "./state/state";
+import { demo_slice } from "./state/store";
 // import { reducer } from "./state/demo.reducer";
 import { reducer } from "./state/demo.reducer.typed";
 

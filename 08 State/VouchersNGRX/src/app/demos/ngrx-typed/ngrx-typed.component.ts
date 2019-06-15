@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Store, select } from "@ngrx/store";
 import { TOGGLE_SHOW_FILTER, UPDATE_FOOD } from "../state/demo.actions";
-import * as fromDemo from "../state/state";
+import * as fromDemo from "../state/store";
 
 @Component({
   selector: "app-ngrx-typed",
@@ -16,8 +16,8 @@ export class NgRxTypedComponent implements OnInit {
 
   // TODO: Demo: Typed NgRX
   ngOnInit() {
-    this.store.pipe(select(fromDemo.getShowFilter)).subscribe(showSum => {
-      this.showFilterPane = showSum;
+    this.store.pipe(select(fromDemo.getShowFilter)).subscribe(hide => {
+      this.showFilterPane = hide;
     });
 
     this.store.pipe(select(fromDemo.getFavFood)).subscribe(fav => {

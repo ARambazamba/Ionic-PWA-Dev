@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Store, select } from "@ngrx/store";
-import * as fromDemo from "../state/state";
+import * as fromDemo from "../state/store";
 import * as demoActions from "../state/demo.actions.creator";
 
 @Component({
